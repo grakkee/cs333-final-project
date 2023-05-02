@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Display Python version
-      - run: python -c "import sys; print(sys.version)"
+        run: python -c "import sys; print(sys.version)"
   
   test:
 
@@ -25,4 +25,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Unit Tests
-      - run: python3 -m unittest unit.py
+        run: python3 -m unittest unit.py
