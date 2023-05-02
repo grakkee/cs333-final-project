@@ -23,7 +23,7 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
   
-  test and coverage report:
+  test-&-coverage report:
 
     runs-on: ubuntu-latest
     steps:
