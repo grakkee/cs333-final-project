@@ -1,11 +1,8 @@
 from payment_behavior import PaymentBehaviorInterface
 
 class PaymentCard(PaymentBehaviorInterface):
-	def pay():
+	def pay(self):
 		print("Paying with card")
-
-		sale = input("enter total in sale")
-		cardNumber = input("enter card number")
 
 		print("purchase successful")
 

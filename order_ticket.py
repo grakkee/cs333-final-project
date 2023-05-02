@@ -4,7 +4,7 @@ class OrderTicket(OrderBehaviorInterface):
 	def __init__(self, ticketNumber):
 		self.ticketNumber = ticketNumber
 	
-	def order():
+	def order(self):
 		print("Ordering with a Ticket")
 		print("Ticket Number:  " + str(self.ticketNumber))
 

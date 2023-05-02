@@ -1,4 +1,4 @@
 class PaymentBehaviorInterface():
-	def pay():
+	def pay(self):
 		pass
 

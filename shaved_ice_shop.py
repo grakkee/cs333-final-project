@@ -6,8 +6,8 @@ class ShavedIceShop():
 		self.order_behavior = ob
 		self.order_behavior = pb
 	
-	def order():
-		self.order_behavior.order()
+	def order(self):
+		return self.order_behavior.order()
 	
-	def pay():
-		self.payment_behavior.pay()
+	def pay(self):
+		return self.payment_behavior.pay()

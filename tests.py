@@ -23,11 +23,31 @@ class TestUnits(unittest.TestCase):
     #
     #
 
-    def test_order(self):
+    def test_order_computer(self):
         o = OrderComputer()
-
         self.assertTrue(o.order())
     
+    def test_order_ticker(self):
+        o = OrderTicket(1)
+        self.assertTrue(o.order())
+    
+    def test_payment_cash(self):
+        p = PaymentCash()
+        self.assertTrue(p.pay())
+    
+    def test_payment_card(self):
+        p = PaymentCard()
+        self.assertTrue(p.pay())
+    
+    def test_kiosk(self):
+        k = Kiosk()
+        self.assertTrue(k.order())
+        self.assertTrue(k.pay())
+    
+    def test_store(self):
+        s = Store()
+        self.assertTrue(s.order())
+        self.assertTrue(s.pay())
 
     #
     #
@@ -70,3 +90,27 @@ class TestUnits(unittest.TestCase):
         self.assertIsInstance(s, Kiosk)
         self.assertIsInstance(s, ShavedIceShop)
         self.assertNotIsInstance(s, Store)
+
+    def test_kiosk_with_order_behavior(self):
+        s = Kiosk()
+        self.assertIsInstance(s.order_behavior, OrderBehaviorInterface)
+        self.assertIsInstance(s.order_behavior, OrderTicket)
+        self.assertNotIsInstance(s.order_behavior, OrderComputer)
+    
+    def test_kiosk_with_payment_behavior(self):
+        s = Kiosk()
+        self.assertIsInstance(s.payment_behavior, PaymentBehaviorInterface)
+        self.assertIsInstance(s.payment_behavior, PaymentCash)
+        self.assertNotIsInstance(s.payment_behavior, PaymentCard)
+    
+    def test_store_with_order_behavior(self):
+        s = Store()
+        self.assertIsInstance(s.order_behavior, OrderBehaviorInterface)
+        self.assertIsInstance(s.order_behavior, OrderComputer)
+        self.assertNotIsInstance(s.order_behavior, OrderTicket)
+    
+    def test_store_with_payment_behavior(self):
+        s = Store()
+        self.assertIsInstance(s.payment_behavior, PaymentBehaviorInterface)
+        self.assertIsInstance(s.payment_behavior, PaymentCard)
+        self.assertNotIsInstance(s.payment_behavior, PaymentCash)

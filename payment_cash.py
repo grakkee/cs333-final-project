@@ -1,15 +1,8 @@
 from payment_behavior import PaymentBehaviorInterface
 
 class PaymentCash(PaymentBehaviorInterface):
-	def pay():
+	def pay(self):
 		print("paying with cash")
-		t = input("enter total in sale")
-		while True:
-			a = input("please enter amount given")
-
-			if (a<t):
-				print("not sufficient amount")
-			else:
-				print("Your change is: " + str(a-t))
-				break;
+		print("$5 was given")
+			
 		return True;
