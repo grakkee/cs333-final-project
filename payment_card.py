@@ -1,6 +1,6 @@
 from payment_behavior import PaymentBehaviorInterface
 
-class PaymentCard(PaymentBehavior):
+class PaymentCard(PaymentBehaviorInterface):
 	def pay():
 		print("Paying with card")
 

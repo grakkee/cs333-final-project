@@ -1,6 +1,6 @@
 from payment_behavior import PaymentBehaviorInterface
 
-class PaymentCash(PaymentBehavior):
+class PaymentCash(PaymentBehaviorInterface):
 	def pay():
 		print("paying with cash")
 		t = input("enter total in sale")

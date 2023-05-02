@@ -1,6 +1,6 @@
 from order_behavior import OrderBehaviorInterface
 
-class OrderTicket(OrderBehavior):
+class OrderTicket(OrderBehaviorInterface):
 	def __init__(self, ticketNumber):
 		self.ticketNumber = ticketNumber
 	
