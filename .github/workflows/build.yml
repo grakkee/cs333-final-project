@@ -35,4 +35,6 @@ jobs:
       - name: Run Unit Tests
         run: |
           coverage run -m unittest tests.py
+      - name: Display Coverage Report
+        run: |
           coverage report
