@@ -1,4 +1,4 @@
-from payment_behavior import PaymentBehavior
+from payment_behavior import PaymentBehaviorInterface
 
 class PaymentCard(PaymentBehavior):
 	def pay():

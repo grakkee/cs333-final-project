@@ -1,4 +1,4 @@
-from order_behavior import OrderBehavior
+from order_behavior import OrderBehaviorInterface
 
 class OrderTicket(OrderBehavior):
 	def __init__(self, ticketNumber):
