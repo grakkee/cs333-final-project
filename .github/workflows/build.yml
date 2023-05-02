@@ -28,5 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install coverage
       - name: Run Unit Tests
-        run: python3 -m unittest tests.py
+        run: coverage run -m unittest tests.py
