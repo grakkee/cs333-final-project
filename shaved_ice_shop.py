@@ -1,5 +1,5 @@
-from order_behavior import OrderBehavior
-from payment_behavior import PaymentBehavior
+from order_behavior import OrderBehaviorInterface
+from payment_behavior import PaymentBehaviorInterface
 
 class ShavedIceShop():
 	def __init__(self, ob=None, pb=None):
