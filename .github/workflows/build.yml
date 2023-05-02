@@ -36,7 +36,9 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install coverage
       - name: Run Unit Tests
-        run: coverage run -m unittest tests.py
+        run: |
+          coverage run -m unittest tests.py
+          coverage report
       - name: Coverage comment
         id: coverage_comment
         uses: py-cov-action/python-coverage-comment-action@v3
