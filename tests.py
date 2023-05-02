@@ -36,19 +36,37 @@ class TestUnits(unittest.TestCase):
     #
 
     def test_order_behavior_with_computer(self):
-        pass
+        t = OrderComputer()
+        self.assertIsInstance(t, OrderComputer)
+        self.assertIsInstance(t, OrderBehaviorInterface)
+        self.assertNotIsInstance(t, OrderTicket)
     
     def test_order_behavior_with_ticket(self):
-        pass
+        t = OrderTicket(1)
+        self.assertIsInstance(t, OrderTicket)
+        self.assertIsInstance(t, OrderBehaviorInterface)
+        self.assertNotIsInstance(t, OrderComputer)
     
     def test_payment_behavior_with_cash(self):
-        pass
+        p = PaymentCash()
+        self.assertIsInstance(p, PaymentCash)
+        self.assertIsInstance(p, PaymentBehaviorInterface)
+        self.assertNotIsInstance(p, PaymentCard)
     
     def test_payment_behavior_with_card(self):
-        pass
+        p = PaymentCard()
+        self.assertIsInstance(p, PaymentCard)
+        self.assertIsInstance(p, PaymentBehaviorInterface)
+        self.assertNotIsInstance(p, PaymentCash)
     
     def test_shaved_ice_shop_with_kiosk(self):
-        pass
+        s = Store()
+        self.assertIsInstance(s, Store)
+        self.assertIsInstance(s, ShavedIceShop)
+        self.assertNotIsInstance(s, Kiosk)
     
     def test_shaved_ice_shop_with_store(self):
-        pass
+        s = Kiosk()
+        self.assertIsInstance(s, Kiosk)
+        self.assertIsInstance(s, ShavedIceShop)
+        self.assertNotIsInstance(s, Store)

@@ -4,5 +4,5 @@ from payment_cash import PaymentCash
 
 class Kiosk(ShavedIceShop):
 	def __init__(self):
-		self.order_behavior = OrderTicket()
+		self.order_behavior = OrderTicket(1)
 		self.payment_behavior = PaymentCash()
