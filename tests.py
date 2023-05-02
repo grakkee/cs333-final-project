@@ -36,18 +36,19 @@ class TestUnits(unittest.TestCase):
     #
 
     def test_order_behavior_with_computer(self):
-        #
+        pass
     
     def test_order_behavior_with_ticket(self):
-        #
+        pass
     
     def test_payment_behavior_with_cash(self):
-        #
+        pass
     
     def test_payment_behavior_with_card(self):
-        #
+        pass
     
     def test_shaved_ice_shop_with_kiosk(self):
-        #
+        pass
     
     def test_shaved_ice_shop_with_store(self):
+        pass
