@@ -6,11 +6,3 @@ class Store(ShavedIceShop):
 	def __init__(self):
 		self.order_behavior = OrderComputer()
 		self.payment_behavior = PaymentCard()
-
-public class Store extends ShavedIce {
-
-	public Store() {
-    	orderBehavior = new Order_Computer();
-    	paymentBehavior = new Payment_Card();
-	}
-}
