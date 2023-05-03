@@ -1,7 +1,45 @@
-Grace Meredith
-CS333 Final Project
-2 May 2023
+# Grace Meredith
+# CS333 Final Project
+# 2 May 2023
 
-This project was my hw1 assignment in Fall 2022 Design Patterns re-written in python.
+### This project was my hw1 assignment in Fall 2022 Design Patterns re-written in python.
 
-To view coverage report, go to Actions -> latest job run on feature branch -> Display Coverage Report
+## Technology Used: 
+
+1.Git/Github for Source Control
+2.Github Actions for Automated Jobs
+3.Python Unittest Library for Unit/Integration Tests
+4.Coverage.py for Coverage Report
+5.Amazon EC2 for Deployment.
+
+## Pipeline: 
+
+1.Publish New Feature Branch -> 
+2.Commit Changes -> 
+3.Create Pull Request -> 
+4.Build & Test jobs run w/ Github Actions (build.yml) -> 
+5.Merge Pull Request into Main Branch once all Tests Pass -> 
+6.Deployment job runs w/ Github Action (deploy.yml) -> 
+7.Changes are deployed to Amazon EC2 instance
+
+## Latest Coverage Report as of 5/2 2pm: 
+
+Name                  Stmts   Miss  Cover
+-----------------------------------------
+kiosk.py                  7      0   100%
+order_behavior.py         3      1    67%
+order_computer.py         9      0   100%
+order_ticket.py           8      0   100%
+payment_behavior.py       3      1    67%
+payment_card.py           6      0   100%
+payment_cash.py           6      0   100%
+shaved_ice_shop.py       10      2    80%
+store.py                  7      0   100%
+-----------------------------------------
+TOTAL                    59      4    93%
+
+## To view coverage report
+
+1.go to Actions ->
+2.latest job that ran "test-coverage-report" on feature branch -> 
+3.Display Coverage Report
