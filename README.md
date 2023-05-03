@@ -24,20 +24,12 @@
 
 ## Latest Coverage Report as of 5/2 2pm: 
 
-Name                  Stmts   Miss  Cover
------------------------------------------
-kiosk.py                  7      0   100%
-order_behavior.py         3      1    67%
-order_computer.py         9      0   100%
-order_ticket.py           8      0   100%
-payment_behavior.py       3      1    67%
-payment_card.py           6      0   100%
-payment_cash.py           6      0   100%
-shaved_ice_shop.py       10      2    80%
-store.py                  7      0   100%
------------------------------------------
-TOTAL                    59      4    93%
 
+
+
+
+
+![img](/screenshot.png)
 ## To view coverage report
 
 1.go to Actions ->
